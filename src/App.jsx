@@ -6,6 +6,7 @@ import Education from './Component/Education'
 import Projects from './Component/Projects'
 import Contact from './Component/Contact'
 import WorkExperience from './Component/WorkExperience'
+import Footer from './Component/Footer'
 function App() {
 
   return (
@@ -25,6 +26,7 @@ function App() {
     <Projects/>
     <Contact/>
     </section>
+    <Footer/>
     </section>
     </>
   )
