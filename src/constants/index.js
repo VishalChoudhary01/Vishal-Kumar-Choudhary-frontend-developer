@@ -79,7 +79,7 @@ export const PROJECTS = [
     title: "Amurtam -Book Consultation with certified Experts",
     image: Amurtam,
     description:"Amuratm is a website designed to provide an efficient and user-friendly doctor booking system. It is built using React.js and Tailwind CSS, ensuring both functionality and responsiveness. The design is a precise implementation of Figma designs, delivering a visually appealing and consistent user experience across all devices. The website is fully responsive and incorporates shuttle animations where needed to enhance user interactions",
-    technologies: ["HTML", "CSS", "ReactJs","react-router","TailwindCSS","ExpressJS","MongoDB"],
+    technologies: ["HTML", "CSS", "ReactJs","React-Router","TailwindCSS","ExpressJS","MongoDB"],
     repo:AmuratmGithub,
     live:amurtamLive,
     Figma:amurtamFigma

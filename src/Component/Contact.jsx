@@ -7,7 +7,7 @@ const Contact = () => {
   const URL = import.meta.env.VITE_URL;
   const KEY = import.meta.env.VITE_KEY;
   return (
-    <section id="Contact" className="border-b border-neutral-900 pb-5">
+    <section id="Contact" className="border-b border-neutral-900 ">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
