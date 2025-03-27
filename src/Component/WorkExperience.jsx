@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const WorkExperience = () => {
   return (
-    <section id='WorkExperience' className='border-b border-neutral-900 pb-4'>
+    <section id='WorkExperience' className='border-b border-neutral-900 pb-4 relative'>
       <motion.h2 
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
@@ -13,58 +13,93 @@ const WorkExperience = () => {
         Work Experience
       </motion.h2>
 
-      <section className='lg:flex block w-full'>
-        <section className='w-full items-center lg:flex lg:flex-col'>
-          {WORK_EXPERIENCE.map((experience, index) => (
-            <section 
-              className='lg:mb-8 flex w-full lg:w-[80%] md:w-[90%] flex-wrap lg:items-center' 
-              key={index}
-            >
-              {/* Duration Section */}
-              <motion.section 
-                whileInView={{ opacity: 1, scale: 1 }}
-                initial={{ opacity: 0, scale: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className='lg:flex-1 md:flex-1 block w-full'
-              >
-                <p className='mb-2 text-[10px] md:text-[16px] text-neutral-400 lg:text-xl tracking-wide font-semibold'>
-                  {experience.duration}
-                </p>
-              </motion.section>
+      <div className='relative mx-auto max-w-5xl px-4'>
+        {/* Timeline line */}
+        <div className='absolute left-1/2 h-full w-0.5 bg-neutral-800 transform -translate-x-1/2' />
 
-              {/* Details Section */}
-              <motion.section 
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className='max-w-xl md:w-[40%] w-60%'
-              >
-                <div className='space-y-2'>
-                  <p className='text-[10px] font-bold lg:text-[18px] md:text-[16px] text-teal-200'>
-                    {experience.company}
-                  </p>
-                  <p className='text-[10px] font-semibold lg:text-[16px] md:text-[14px]'>
-                    {experience.role}
-                  </p>
-                  <div className='flex flex-wrap gap-2'>
-                    {experience.technologies.map((tech, i) => (
-                      <span 
-                        key={i}
-                        className='text-[8px] md:text-[10px] px-2 py-1 bg-neutral-800 rounded-full'
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <p className='text-neutral-400 text-[10px] md:text-[12px] lg:text-[14px] leading-relaxed'>
-                    {experience.description}
+        {WORK_EXPERIENCE.map((experience, index) => (
+          <motion.div
+            key={index}
+            className='relative mb-12'
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            {/* Timeline dot */}
+            <div className='absolute left-1/2 w-3 h-3 bg-teal-500 rounded-full transform -translate-x-1/2 -translate-y-4 shadow-lg' />
+            
+            <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8`}>
+              <div className='flex-1 hidden md:block'>
+                {index % 2 === 0 && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className='text-neutral-400 text-sm font-medium text-right'
+                  >
+                    {experience.duration}
+                  </motion.p>
+                )}
+              </div>
+
+              <div className='flex-1 bg-neutral-800/50 p-6 rounded-2xl border border-neutral-700 backdrop-blur-sm hover:border-teal-500/30 transition-all'>
+                <div className='md:hidden mb-2'>
+                  <p className='text-neutral-400 text-xs font-medium'>
+                    {experience.duration}
                   </p>
                 </div>
-              </motion.section>
-            </section>
-          ))}
-        </section>
-      </section>
+                
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className='space-y-4'
+                >
+                  <div>
+                    <p className='text-teal-300 font-bold text-lg'>
+                      {experience.company}
+                    </p>
+                    <p className='text-neutral-300 font-medium text-sm'>
+                      {experience.role}
+                    </p>
+                  </div>
+
+                  <p className='text-neutral-400 text-sm leading-relaxed'>
+                    {experience.description}
+                  </p>
+
+                  <div className='flex flex-wrap gap-2'>
+                    {experience.technologies.map((tech, i) => (
+                      <motion.span
+                        key={i}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ type: 'spring', delay: i * 0.05 }}
+                        className='px-3 py-1 bg-neutral-900 rounded-full text-xs text-teal-300 border border-teal-500/30'
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+
+              <div className='flex-1 hidden md:block'>
+                {index % 2 !== 0 && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className='text-neutral-400 text-sm font-medium'
+                  >
+                    {experience.duration}
+                  </motion.p>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   )
 }
