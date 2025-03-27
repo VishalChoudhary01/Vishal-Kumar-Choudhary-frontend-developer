@@ -1,17 +1,22 @@
 import urifry from "../assets/projects/uifry.jpg";
-import quickyWeather from "../assets/projects/quickyWeather.jpg";
+import Amurtam from "../assets/projects/Amurtam.png";
 import portfolio from "../assets/projects/portfolio.png";
 
 
+
 // Project github repo
-const quickyGithub=import.meta.env.VITE_QUICKY_REPO
 const uifryGithub=import.meta.env.VITE_UIFRY_REPO
 const portfolioGithub=import.meta.env.VITE_PORTFOLIO_REACT_REPO
+const AmuratmGithub=import.meta.env.VITE_AMURTAM_REPO
 
 // Project Live Link
-const quickyLive=import.meta.env.VITE_WEATHER_LIVE
 const uifryLive=import.meta.env.VITE_UIFRY_LIVE
 const portfolioLive=import.meta.env.VITE_PORTFOLIO_LIVE
+const amurtamLive=import.meta.env.VITE_AMURTAM_LIVE
+
+// Figma
+const amurtamFigma=import.meta.env.VITE_AMURTAM_FIGMA
+const urifyFigma=import.meta.env.VITE_URIFY_FIGMA
 
 export const HERO_CONTENT = `I am a passionate front-end developer with a keen eye for crafting visually stunning and artistic web applications. Over the past six months as an intern, I have developed strong skills in HTML, CSS, JavaScript, Tailwind CSS, React.js, and Next.js. I’ve had hands-on experience in developing functionality and recreating the exact UI from Figma designs, ensuring a seamless user experience that matches the vision. My love for creating eye-catching and innovative designs drives me to deliver exceptional user experiences. I am detail-oriented and dedicated to making websites not only functional but also aesthetically pleasing.`;
 
@@ -67,7 +72,17 @@ export const PROJECTS = [
       "A modern, fully responsive landing page for a financial decisions app. The page features a clean and professional design, showcasing the app's interface and key features.Clean, user-friendly interface designed to attract and engage visitors.",
     technologies: ["HTML", "CSS", "Javascript"],
     repo:uifryGithub,
-    live:uifryLive
+    live:uifryLive,
+    Figma:urifyFigma,
+  },
+  {
+    title: "Amurtam -Book Consultation with certified Experts",
+    image: Amurtam,
+    description:"Amuratm is a website designed to provide an efficient and user-friendly doctor booking system. It is built using React.js and Tailwind CSS, ensuring both functionality and responsiveness. The design is a precise implementation of Figma designs, delivering a visually appealing and consistent user experience across all devices. The website is fully responsive and incorporates shuttle animations where needed to enhance user interactions",
+    technologies: ["HTML", "CSS", "ReactJs","react-router","TailwindCSS","ExpressJS","MongoDB"],
+    repo:AmuratmGithub,
+    live:amurtamLive,
+    Figma:amurtamFigma
   },
   {
     title: "Personal Portfolio",
