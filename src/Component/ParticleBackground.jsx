@@ -14,26 +14,24 @@ const ParticleBackground = () => {
   
     return (
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => {
+        {[...Array(40)].map((_, i) => {
           const randomColor = colors[Math.floor(Math.random() * colors.length)];
-          const randomWidth = 1 + Math.random() * 5; // Size from 1 to 6 pixels
-          const randomHeight = 1 + Math.random() * 5; // Size from 1 to 6 pixels
-          const randomOpacity = 0.1 + Math.random() * 0.9; // Opacity from 0.1 to 1
-          const isRound = Math.random() > 0.5; // 50% chance to be round (circle)
+          const randomSize = 2 + Math.random() * 5; // Size from 2 to 8 pixels
+          const randomLeft = Math.random() * 100;
+          const randomTop = Math.random() * 100;
+          const randomOpacity = 0.1 + Math.random() * 0.6; // Opacity from 0.1 to 1
           const randomAnimationDuration = 5 + Math.random() * 35; // Duration from 5 to 40 seconds
           const randomAnimationDelay = Math.random() * 10; // Delay from 0 to 10 seconds
   
           return (
             <span
               key={i}
-              className={`absolute ${randomColor} ${
-                isRound ? "rounded-full" : ""
-              }`}
+              className={`absolute ${randomColor} rounded-full`}
               style={{
-                width: `${randomWidth}px`,
-                height: `${randomHeight}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                width: `${randomSize}px`,
+                height: `${randomSize}px`,
+                left: `${randomLeft}%`,
+                top: `${randomTop}%`,
                 opacity: randomOpacity,
                 animation: `float ${randomAnimationDuration}s infinite linear`,
                 animationDelay: `${randomAnimationDelay}s`,
