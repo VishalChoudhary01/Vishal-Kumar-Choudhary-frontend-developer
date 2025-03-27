@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants"
-import heroImage from '../assets/projects/darkcode.jpg'
+import heroImage from '../assets/AboutMe/bwPic.jpg'
 import { motion } from "framer-motion"
 import { FaDownload } from "react-icons/fa6";
 import ResumePdf from '../assets/File/Vishal Kumar MERN.pdf'

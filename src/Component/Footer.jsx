@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+import Resume from '../../src/assets/File/Vishal Kumar MERN.pdf'
 import { FaLinkedin, FaGithub, FaRegEnvelope } from 'react-icons/fa';
 import { FiMapPin, FiPhone } from 'react-icons/fi';
 import ParticleBackground from './ParticleBackground';
@@ -65,12 +66,11 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-teal-300">Quick Links</h3>
             <nav className="grid grid-cols-2 gap-4">
-              <a href="#About" className="text-neutral-300 hover:text-teal-300 transition-colors">About Me</a>
-              <a href="#Project" className="text-neutral-300 hover:text-teal-300 transition-colors">Projects</a>
-              <a href="#Technologies" className="text-neutral-300 hover:text-teal-300 transition-colors">Skills</a>
-              <a href="#Contact" className="text-neutral-300 hover:text-teal-300 transition-colors">Contact</a>
-              <a href="#Blog" className="text-neutral-300 hover:text-teal-300 transition-colors">Blog</a>
-              <a href="#Resume" className="text-neutral-300 hover:text-teal-300 transition-colors">Resume</a>
+              <a href="#About" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">About Me</a>
+              <a href="#Project" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Projects</a>
+              <a href="#Technologies" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Skills</a>
+              {/* <a href="#Contact" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Contact</a> */}
+              <a  href={Resume} className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Resume</a>
             </nav>
           </div>
         </div>
