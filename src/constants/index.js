@@ -6,6 +6,7 @@ import portfolio from "../assets/projects/portfolio.png";
 
 // Project github repo
 const uifryGithub=import.meta.env.VITE_UIFRY_REPO
+
 const portfolioGithub=import.meta.env.VITE_PORTFOLIO_REACT_REPO
 const AmuratmGithub=import.meta.env.VITE_AMURTAM_REPO
 
