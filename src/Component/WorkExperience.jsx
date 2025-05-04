@@ -9,7 +9,7 @@ const WorkExperience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className='my-20 heading text-center text-2xl md:text-3xl lg:text-4xl'
+        className='my-20 heading text-center font-Poppins text-2xl md:text-3xl lg:text-4xl'
       >
         Work Experience
       </motion.h2>

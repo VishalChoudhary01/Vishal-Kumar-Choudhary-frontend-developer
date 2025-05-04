@@ -12,7 +12,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="text-center heading text-2xl md:text-3xl lg:text-4xl"
+        className="text-center heading text-2xl font-Poppins md:text-3xl lg:text-4xl"
       >
         Get In Touch
       </motion.h1>

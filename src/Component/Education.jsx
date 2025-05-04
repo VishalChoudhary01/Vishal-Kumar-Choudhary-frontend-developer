@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const Education = () => {
   return (
     <section id='Education' className='border-b border-neutral-900 pb-4'>
-        <motion.h2 whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-100}} transition={{duration:0.8,delay:0.5}} className='my-20 heading text-center text-2xl md:text-3xl lg:text-4xl'>Education</motion.h2>
+        <motion.h2 whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-100}} transition={{duration:0.8,delay:0.5}} className='my-20 heading text-center font-Poppins text-2xl md:text-3xl lg:text-4xl'>Education</motion.h2>
         <section className='lg:flex  block  w-full'>
         <section className=' w-full   items-center  lg:flex lg:flex-col'>
             {EDUCATION.map((education,index)=>(

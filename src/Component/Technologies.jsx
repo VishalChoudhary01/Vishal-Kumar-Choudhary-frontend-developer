@@ -24,7 +24,7 @@ const Technologies = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="my-20 text-center heading text-2xl md:text-3xl lg:text-4xl"
+        className="my-20 text-center heading font-Poppins text-2xl md:text-3xl lg:text-4xl"
       >
         Technologies
       </motion.h1>
@@ -32,7 +32,7 @@ const Technologies = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1, delay: 1 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex flex-wrap items-center justify-center gap-4 font-nunito"
       >
         {/* Existing Technologies */}
         <section className="text-center">

@@ -7,14 +7,7 @@ import Carousel from "./Carousel";
 const Projects = () => {
   return (
     <section id="Projects" className="border-b border-neutral-900 py-20 px-4 md:px-8">
-      <motion.h2 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center text-4xl md:text-5xl font-bold mb-20 bg-gradient-to-r from-teal-400 to-emerald-600 bg-clip-text text-transparent"
-      >
-        Featured Projects
-      </motion.h2>
+      <motion.h1 whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-30}} transition={{duration:0.8,delay:0.5}} className="my-20 heading  text-center text-2xl md:text-3xl lg:text-4xl ">Projects </motion.h1>
 
       <div className="max-w-7xl mx-auto space-y-24">
         {PROJECTS.map((project, index) => (
@@ -31,7 +24,7 @@ const Projects = () => {
             </div>
 
             <div className="lg:w-1/2 flex flex-col justify-center space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-neutral-100">
+              <h3 className="text-2xl md:text-3xl font-semibold font-OpenSans  text-neutral-100/80">
                 {project.title}
               </h3>
               
