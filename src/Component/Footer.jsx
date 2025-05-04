@@ -9,7 +9,7 @@ const Footer = () => {
   
 
   return (
-    <footer className="relative bg-neutral-900 mt-20 pt-20">
+    <footer className="relative bg-neutral-950 mt-20 pt-20">
       <ParticleBackground />
       
       <div className="container mx-auto px-6 py-12 relative z-10">
@@ -67,7 +67,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-teal-300">Quick Links</h3>
             <nav className="grid grid-cols-2 gap-4">
               <a href="#About" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">About Me</a>
-              <a href="#Project" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Projects</a>
+              <a href="#Projects" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Projects</a>
               <a href="#Technologies" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Skills</a>
               {/* <a href="#Contact" className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Contact</a> */}
               <a  href={Resume} className="text-neutral-300 cursor-pointer hover:text-teal-300 transition-colors">Resume</a>

@@ -2,9 +2,13 @@ import aboutMe from '../assets/AboutMe/laptopCode.jpg'
 import {ABOUT_TEXT} from '../constants/index'
 import {ABOUT_AIM} from '../constants/index'
 import { motion } from 'framer-motion'
+import Particle from './Particle/Particle'
 const About = () => {
   return (
     <section id='About' className="border-b border-neutral-900 pb-4">
+      <div className="absolute inset-0 -z-10">
+      <Particle/>
+      </div>
 
       <motion.h1 whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-30}} transition={{duration:0.8,delay:0.5}} className="my-20 heading  text-center text-2xl md:text-3xl lg:text-4xl ">About <span className="text-neutral-500">Me</span> </motion.h1>
     <section className="flex flex-wrap">
