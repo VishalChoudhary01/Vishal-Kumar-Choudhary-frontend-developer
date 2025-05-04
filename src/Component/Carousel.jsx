@@ -45,7 +45,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl group bg-neutral-950 p-4 flex items-center justify-center">
+    <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden border-neutral-700/80 border group  md:p-4 px-3 py-1 flex items-center justify-center">
       <AnimatePresence mode="popLayout" initial={false} custom={direction}>
         <motion.div
           key={activeIndex}
@@ -58,7 +58,7 @@ const Carousel = ({ images }) => {
         >
           <img
             src={images[activeIndex]}
-            className="w-full h-full object-contain object-center cursor-pointer bg-black rounded-md"
+            className="w-full h-full object-contain object-center cursor-pointer  rounded-md"
             alt="Project screenshot"
             loading="lazy"
           />
@@ -68,9 +68,9 @@ const Carousel = ({ images }) => {
       {images.length > 1 && (
         <>
           {/* Progress bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-neutral-800/50">
+          <div className="absolute bottom-0 left-0 right-0 md:h-1 h-[0.1rem] bg-neutral-800/50">
             <motion.div
-              className="h-full bg-teal-400"
+              className="h-full bg-teal-400/70"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 5, ease: 'linear' }}
@@ -87,9 +87,9 @@ const Carousel = ({ images }) => {
                   setDirection(index > activeIndex ? 'next' : 'prev');
                   setActiveIndex(index);
                 }}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`md:w-3 md:h-3 h-2 w-2 rounded-full transition-all ${
                   index === activeIndex
-                    ? 'bg-teal-400 scale-110'
+                    ? 'bg-teal-400/75 scale-110'
                     : 'bg-neutral-600 hover:bg-neutral-400 scale-90'
                 }`}
               />

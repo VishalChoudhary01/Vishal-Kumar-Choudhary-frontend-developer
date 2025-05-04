@@ -44,7 +44,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className={`flex flex-col gap-12 lg:gap-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+              className={`flex flex-col gap-8  lg:gap-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
             >
               {/* Image Carousel Section */}
               <div className="lg:w-1/2">
@@ -53,7 +53,7 @@ const Projects = () => {
 
               {/* Content Section */}
               <div className="lg:w-1/2 flex flex-col justify-center space-y-6">
-                <h3 className="text-2xl md:text-3xl font-semibold font-OpenSans text-neutral-100/80">
+                <h3 className="text-xl md:text-3xl font-semibold font-Poppins text-neutral-100/80">
                   {project.title}
                 </h3>
 
@@ -68,7 +68,7 @@ const Projects = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="text-lg text-neutral-400 leading-relaxed"
+                    className="md:text-lg text-[0.88rem] text-neutral-400 leading-relaxed"
                   >
                     {displayedDescription}
                     {shouldTruncate && (
@@ -87,7 +87,7 @@ const Projects = () => {
                 {/* Technology Tags */}
                 <motion.div 
                   layout
-                  className="flex flex-wrap gap-2"
+                  className="flex flex-wrap md:gap-2 gap-x-1 gap-y-2"
                 >
                   {project.technologies.map((tech, idx) => (
                     <motion.span
@@ -95,7 +95,7 @@ const Projects = () => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: idx * 0.1 }}
-                      className="px-3 py-1.5 text-sm rounded-full bg-neutral-800/50 text-teal-300 border border-teal-400/20"
+                      className="md:px-3 px-2 md:py-1.5 py-1 md:text-sm text-[0.8rem] rounded-full bg-neutral-800/50 text-teal-300 border border-teal-400/20"
                     >
                       {tech}
                     </motion.span>
@@ -105,42 +105,42 @@ const Projects = () => {
                 {/* Project Links */}
                 <motion.div 
                   layout
-                  className="flex flex-wrap gap-4 mt-4"
+                  className="flex flex-wrap md:justify-start justify-center md:gap-4 gap-y-3 gap-x-2 mt-4"
                 >
                   <motion.a
                     href={project.repo}
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-teal-400/10 text-teal-300 hover:bg-teal-400/20 transition-all"
+                    className="flex items-center gap-2 md:px-6 md:py-2.5 px-3 py-2 md:text-[1rem] text-[0.88rem] rounded-lg bg-teal-400/10 text-teal-300 hover:bg-teal-400/20 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <FaGithub className="text-lg" />
+                    <FaGithub className="md:text-lg text-[1rem]" />
                     <span>Repository</span>
                   </motion.a>
 
                   <motion.a
                     href={project.live}
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition-all"
+                    className="flex items-center gap-2 md:px-6 md:py-2.5 px-3 py-2 md:text-[1rem] text-[0.88rem] rounded-lg bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <GrDeploy className="text-lg" />
+                    <GrDeploy className="md:text-lg text-[1rem]" />
                     <span>Live Demo</span>
                   </motion.a>
 
                   {project.Figma && (
                     <motion.a
                       href={project.Figma}
-                      className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all"
+                      className="flex items-center gap-2 md:px-6 md:py-2.5 px-3 py-2 md:text-[1rem] text-[0.88rem] rounded-lg bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <FaFigma className="text-lg" />
+                      <FaFigma className="md:text-lg text-[1rem]" />
                       <span>Figma</span>
                     </motion.a>
                   )}

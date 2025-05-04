@@ -58,12 +58,12 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="relative"
             >
-              <p className='lg:text-lg max-w-xl my-2'>
+              <p className='md:text-lg text-[0.9rem] tracking-wider max-w-xl my-2'>
                 {expanded.text ? ABOUT_TEXT : `${ABOUT_TEXT.slice(0, MAX_LENGTH)}...`}
                 {ABOUT_TEXT.length > MAX_LENGTH && (
                   <motion.button
                     onClick={() => toggleExpanded('text')}
-                    className="text-teal-400/80 hover:text-teal-300 ml-2 font-medium"
+                    className="text-teal-400/80 md:text-lg text-[0.9rem] tracking-wider hover:text-teal-300 ml-2 font-medium"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -78,12 +78,12 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="relative"
             >
-              <p className='lg:text-lg max-w-xl my-2'>
+              <p className='md:text-lg text-[0.9rem] tracking-wider max-w-xl my-2'>
                 {expanded.aim ? ABOUT_AIM : `${ABOUT_AIM.slice(0, MAX_LENGTH)}...`}
                 {ABOUT_AIM.length > MAX_LENGTH && (
                   <motion.button
                     onClick={() => toggleExpanded('aim')}
-                    className="text-teal-400 hover:text-teal-300 ml-2 font-medium"
+                    className="text-teal-400 md:text-lg text-[0.9rem] tracking-wider hover:text-teal-300 ml-2 font-medium"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

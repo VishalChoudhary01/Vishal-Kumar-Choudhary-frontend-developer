@@ -4,7 +4,7 @@ import heroImage from '../assets/AboutMe/bwPic.jpg'
 import { motion } from "framer-motion"
 import { FaDownload } from "react-icons/fa6";
 import ResumePdf from '../assets/File/Vishal Kumar MERN Stack.pdf'
-
+import Particle from "./Particle/Particle";
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
   visible: {
@@ -24,6 +24,9 @@ const Hero = () => {
 
   return (
     <section id="Home" className="border-b border-neutral-900 pb-4 lg:mb-35">
+      <div className="absolute inset-0 -z-10">
+        <Particle/>
+      </div>
       <section className="flex flex-wrap">
         <section className="w-full lg:w-1/2">
           <section className="flex flex-col items-center lg:items-start">
@@ -49,7 +52,7 @@ const Hero = () => {
               variants={container(1)} 
               initial="hidden" 
               animate="visible" 
-              className="my-2 max-w-xl tracking-wide lg:text-lg py-2"
+              className="my-2 max-w-xl tracking-wide md:text-lg  text-[0.88rem] py-2"
             >
               <motion.div layout transition={{ duration: 0.3 }}>
                 {isExpanded ? HERO_CONTENT : truncatedText}
