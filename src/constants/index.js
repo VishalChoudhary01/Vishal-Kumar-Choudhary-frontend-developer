@@ -168,8 +168,8 @@ export const PROJECTS = [
   {
     title:"Soft Sells",
     screenshots:[softsellsdesktop3,softsellsdesktop2,softsellsdesktop1,softsellsdarkdesktop6,softsellsdesktop4,softsellsdesktop5, softsellsmobile1,softsellsmobile2,softsellsmobile3,softsellsmobile4,softsellsmobile5],
-    description:"Soft Sells is built using React.js,ReduxToolkit and Tailwind CSS, ensuring both functionality and responsiveness.  Delivering a visually appealing and consistent user experience across all devices. The website is fully responsive and incorporates shuttle animations where needed to enhance user interactions",
-    technologies: ["HTML", "CSS", "ReactJs","TailwindCSS","ReduxToolkit"],
+    description:"Soft Sells is built using React.js,ReduxToolkit and Tailwind CSS, ensuring both functionality and responsiveness.  Delivering a visually appealing and consistent user experience across all devices. The website is fully responsive and incorporates shuttle animations where needed to enhance user interactions and dark mode functionality with localStorage.",
+    technologies: ["HTML", "CSS", "ReactJs","TailwindCSS","ReduxToolkit","localStorage"],
     repo:softsells,
     live:softsellsLive,
 
