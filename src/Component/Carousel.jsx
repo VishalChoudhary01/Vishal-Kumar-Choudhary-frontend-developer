@@ -70,7 +70,7 @@ const Carousel = ({ images }) => {
           {/* Progress bar */}
           <div className="absolute bottom-0 left-0 right-0 md:h-1 h-[0.1rem] bg-neutral-800/50">
             <motion.div
-              className="h-full bg-teal-400/70"
+              className="h-full gradient-bar rounded-r-full"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 5, ease: 'linear' }}
@@ -89,7 +89,7 @@ const Carousel = ({ images }) => {
                 }}
                 className={`md:w-3 md:h-3 h-2 w-2 rounded-full transition-all ${
                   index === activeIndex
-                    ? 'bg-teal-400/75 scale-110'
+                    ? 'bg-teal-400/75 scale-110 animate-pulse'
                     : 'bg-neutral-600 hover:bg-neutral-400 scale-90'
                 }`}
               />

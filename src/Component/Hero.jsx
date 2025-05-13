@@ -43,7 +43,7 @@ const Hero = () => {
               variants={container(0.5)} 
               initial="hidden" 
               animate="visible" 
-              className="text_Hue_Animation bg font-semibold text-xl md:text-2xl lg:text-3xl font-roboto tracking-tight flex lg:flex-row flex-col items-center lg:gap-x-[1.5rem]"
+              className="text_Hue_Animation bg font-semibold text-xl md:text-2xl lg:text-3xl font-nunito tracking-tight flex lg:flex-row flex-col items-center lg:gap-x-[1.5rem]"
             >
               Frontend Developer <span className="text-[0.8em] md:text-xl lg:text-2xl"> [MERN]</span>
             </motion.span>

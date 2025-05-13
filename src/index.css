@@ -12,14 +12,7 @@
 }
 
 
-/*
-font-family: "Noto Serif", serif; 
-font-family: "Poppins", sans-serif;
-font-family: "Roboto Slab", serif;
-font-family: "Lato", sans-serif;
-font-family: "Roboto", sans-serif;
-font-family: "Playfair Display", serif;
-*/
+
 .hueButtonHover{
     position: relative;
     width: 40%;
@@ -93,15 +86,15 @@ font-family: "Playfair Display", serif;
 
   /* Text Hue Animation */
   .text_Hue_Animation{
-      background: linear-gradient(to right ,#0bf5ed,#06c923,#b3e70a,#fc7f09,#eb2a04,#f103c9,#2752ed,#4def16,#e6f60c,#0bf5ed);
+      background: linear-gradient(to right ,white,#0bf5ed,#06c923,#b3e70a,#fc7f09,#eb2a04,#f103c9,#2752ed,#4def16,#e6f60c,#0bf5ed);
     background-clip: text;
     background-size: 200% auto;
+  
     color: transparent;
     animation: textHueAnimate 8s ease infinite ;
     font-weight: 800;
     letter-spacing: 4px;
     word-spacing: 3px;
-    font-family: "Lato", sans-serif;
 
   }
 
@@ -234,4 +227,20 @@ padding: 0 10px;
   }
 
 
+  
+  /* gradient progress bar */
+  @keyframes gradientSlide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .gradient-bar {
+    background: linear-gradient(270deg, #c8fbf7, #2dd4bf, #017b69, #02534c);
+    background-size: 400% 400%;
+    animation: gradientSlide 5s linear infinite;
+  }
   

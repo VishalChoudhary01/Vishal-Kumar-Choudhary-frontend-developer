@@ -47,16 +47,32 @@ import SearchCoin from "../assets/projects/cryptotracker/Search.png";
 import Trending from "../assets/projects/cryptotracker/Trending.png";
 import TrendingSavedCoin from "../assets/projects/cryptotracker/TrendingSavedCoin.png";
 
+
+// softsells
+import softsellsdesktop1 from '../assets/projects/softsels/softsellsdesktop.png';
+import softsellsdesktop2 from '../assets/projects/softsels/softsellsdesktop2.png';
+import softsellsdesktop3 from '../assets/projects/softsels/softsellsdesktop3.png';
+import softsellsdesktop4 from '../assets/projects/softsels/softsellsdesktop4.png';
+import softsellsdesktop5 from '../assets/projects/softsels/softsellsdesktop5.png';
+import softsellsdarkdesktop6 from '../assets/projects/softsels/softsellsdesktop03.png';
+import softsellsmobile1 from '../assets/projects/softsels/softsellsmobile1.jpeg';
+import softsellsmobile2 from '../assets/projects/softsels/softsellsmobile2.jpeg';
+import softsellsmobile3 from '../assets/projects/softsels/softsellsmobile3.jpeg';
+import softsellsmobile4 from '../assets/projects/softsels/softsellsmobile4.jpeg';
+import softsellsmobile5 from '../assets/projects/softsels/softsellsmobile5.jpeg';
+
 // Project github repo
 const uifryGithub=import.meta.env.VITE_UIFRY_REPO
 
 const portfolioGithub=import.meta.env.VITE_PORTFOLIO_REACT_REPO
 const AmuratmGithub=import.meta.env.VITE_AMURTAM_REPO
+const softsells=import.meta.env.VITE_SOFTSELLS_REPO
 
 // Project Live Link
 const uifryLive=import.meta.env.VITE_UIFRY_LIVE
 const portfolioLive=import.meta.env.VITE_PORTFOLIO_LIVE
 const amurtamLive=import.meta.env.VITE_AMURTAM_LIVE
+const softsellsLive=import.meta.env.VITE_SOFTSELLS_LIVE 
 
 // Figma
 const amurtamFigma=import.meta.env.VITE_AMURTAM_FIGMA
@@ -149,6 +165,16 @@ export const PROJECTS = [
     live:amurtamLive,
     Figma:amurtamFigma
   },
+  {
+    title:"Soft Sells",
+    screenshots:[softsellsdesktop3,softsellsdesktop2,softsellsdesktop1,softsellsdarkdesktop6,softsellsdesktop4,softsellsdesktop5, softsellsmobile1,softsellsmobile2,softsellsmobile3,softsellsmobile4,softsellsmobile5],
+    description:"Soft Sells is built using React.js,ReduxToolkit and Tailwind CSS, ensuring both functionality and responsiveness.  Delivering a visually appealing and consistent user experience across all devices. The website is fully responsive and incorporates shuttle animations where needed to enhance user interactions",
+    technologies: ["HTML", "CSS", "ReactJs","TailwindCSS","ReduxToolkit"],
+    repo:softsells,
+    live:softsellsLive,
+
+
+  }
   
   
   
