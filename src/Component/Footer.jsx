@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
-import Resume from '../../src/assets/File/Vishal Kumar MERN Stack.pdf'
+import Resume from '../../src/assets/File/Vishal Kumar Choudhary.pdf'
 import { FaLinkedin, FaGithub, FaRegEnvelope } from 'react-icons/fa';
 import { FiMapPin, FiPhone } from 'react-icons/fi';
 import ParticleBackground from './ParticleBackground';
