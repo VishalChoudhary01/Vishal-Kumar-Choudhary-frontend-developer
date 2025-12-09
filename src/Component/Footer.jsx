@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
-import Resume from '../../src/assets/File/Vishal Kumar Choudhary.pdf'
+// import Resume from '../../src/assets/File/Vishal Kumar Choudhary.pdf'
+import Resume from '../../src/assets/File/Vishal_Kumar_Resume_frontend.pdf'
 import { FaLinkedin, FaGithub, FaRegEnvelope } from 'react-icons/fa';
 import { FiMapPin, FiPhone } from 'react-icons/fi';
 import ParticleBackground from './ParticleBackground';
@@ -83,14 +84,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes float {
-          0% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(-50vw, 50vh) rotate(180deg); }
-          100% { transform: translate(100vw, -50vh) rotate(360deg); }
-        }
-      `}</style>
     </footer>
   );
 };

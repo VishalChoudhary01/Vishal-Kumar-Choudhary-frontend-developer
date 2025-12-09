@@ -3,7 +3,8 @@ import { HERO_CONTENT } from "../constants";
 import heroImage from '../assets/AboutMe/bwPic.jpg'
 import { motion } from "framer-motion"
 import { FaDownload } from "react-icons/fa6";
-import ResumePdf from '../assets/File/Vishal Kumar Choudhary.pdf'
+// import ResumePdf from '../assets/File/Vishal Kumar Choudhary.pdf'
+import ResumePdf from '../assets/File/Vishal_Kumar_Resume_frontend.pdf'
 import Particle from "./Particle/Particle";
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
